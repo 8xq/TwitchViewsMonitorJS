@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <title>Twitch monitoring @ Nullcheats</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+   </head>
+   <body onload="Start()">
+      <div class="nb">
+         <a onclick="OpenModal()">🛠️ options</a>
+      </div>
+      <div id="Modal" class="Modal">
+         <div class="ModalContent">
+            <span class="ModalTitle">Settings</span><span class="ModalClose"><img src="Data/cancel.svg" onclick="CloseModal()"></span>
+            <br><br>
+            <label>Twitch channel name</label><br>
+            <input type="text" id="ChannelName" placeholder="https://www.twitch.tv/"><br><br>
+            <input type="checkbox" id="ShowStats" checked>
+            <label>Show stats</label>
+            <br>
+            <input type="checkbox" id="LogOutput" checked>
+            <label>Create output file ?</label>
+            <br><br>
+            <label>Minutes to monitor</label>
+            <br>
+            <label id="Minutes">30 minutes</label>
+            <br>
+            <input type="range" min="5" max="60" value="30" class="slider" id="TimeMonitor">
+            <br>
+            <button onclick="Run()" class="BTN">Start monitoring</button>
+         </div>
+      </div>
+      <div class="DBcontainer flex" id="DBcontainer">
+         <div class="DataBox">
+            <h1 id="AVGC">n/a</h1>
+            <h3>Avg views</h3>
+         </div>
+         <div class="DataBox">
+            <h1 id="MAXC">n/a</h1>
+            <h3>Max views</h3>
+         </div>
+         <div class="DataBox">
+            <h1 id="MINC">n/a</h1>
+            <h3>Min views</h3>
+         </div>
+         <div class="DataBox">
+            <h1 id="ONLINE">n/a</h1>
+            <h3>Stream status</h3>
+         </div>
+      </div>
+      <center>
+         <div class="CanvasContainer">
+            <canvas id="myChart" width="200" height="85"></canvas>
+            <br>
+            <div class="ExportBTN">
+               <button class="BTN" id="downloadCSV">Export CSV</button>   
+            </div>
+         </div>
+         <script src="TwitchViewer.JS"></script>
+      </center>
+      <div class="Footer">
+		<p>
+			<a href="https://github.com/HDzzzz"><img src="Data/github.svg" alt="Config"></a>
+			<a href="https://www.youtube.com/channel/UCkDN6rpJxhyzfhmtAPRCKdA"><img src="Data/YT.svg" alt="Config"></a>
+		</p>
+	</div>
+   </body>
+</html>
