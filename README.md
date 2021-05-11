@@ -1,6 +1,6 @@
 # TwitchViewsMonitorJS
 ```
-This is a very basic JS project that will simply monitor a live twitch channel and log the output with a graph
+This is a very basic JS project that will simply monitor a live twitch channel and output to a graph
 This project uses the main API to return the current views and simply logs them into an array
 As you will be able to see this also has a "Export function" to save the data as a .CSV file
 ```
