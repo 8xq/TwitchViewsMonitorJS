@@ -98,7 +98,7 @@ const MonitorMethod = () => {
    fetch('https://api.twitch.tv/helix/streams?user_login=' + streamer, {
       headers: {
          'Content-Type': 'application/json',
-         'Client-Id': 'kimne78kx3ncx6brgo4mv6wki5h1ko'
+         'Client-Id': 'd4uvtfdr04uq6raoenvj7m86gdk16v'
       },
    }).then(response => response.text()).then((parse) => {
       let JsonData = JSON.parse(parse);
