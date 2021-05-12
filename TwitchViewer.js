@@ -123,7 +123,6 @@ const MonitorMethod = () => {
    });
 }
 
-
 /*
 This function is to simply loop from 0-monitoring time
 This function is invoked when our "Timer" / "Set interval" is active
@@ -259,8 +258,9 @@ var myChart = new Chart(ctx, {
       scales: {
          yAxes: [{
             ticks: {
-               max: YaxisMax,
-               min: 0
+              // max: YaxisMax,
+               beginAtZero: true   // minimum value will be 0.
+
             },
             gridLines: {
                display: false
