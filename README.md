@@ -13,6 +13,7 @@ As you will be able to see this also has a "Export function" to save the data as
 2 | Track from 5-60 minutes at once 
 3 | Export data logged to .CSV 
 4 | Hide/show data boxes
+5 | Export graph as image to .PNG
 ```
 
 ## Credits
