@@ -123,6 +123,7 @@ const MonitorMethod = () => {
    });
 }
 
+
 /*
 This function is to simply loop from 0-monitoring time
 This function is invoked when our "Timer" / "Set interval" is active
@@ -218,6 +219,18 @@ document.getElementById("downloadCSV").addEventListener("click", function() {
    document.body.appendChild(link);
    link.click();
    document.body.removeChild(link);
+});
+
+/*
+This is a very basic function that simply outputs an image of our graph for download
+This converts our "chart" from chart.js to a base64 image
+We then download this as the streamer name.png
+*/
+document.getElementById("downloadGraph").addEventListener("click",function(){
+   var a = document.createElement('a');
+   a.href = myChart.toBase64Image();
+   a.download = streamer+'('+ MonitoringTime+').png';
+   a.click();
 });
 
 /*

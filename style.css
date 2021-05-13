@@ -173,6 +173,7 @@ input[type=checkbox]{
 }
 .ExportBTN{
     width: 25%;
+    display: flex;
 }
 .Footer {
     position: fixed;
