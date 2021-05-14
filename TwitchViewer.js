@@ -233,6 +233,31 @@ document.getElementById("downloadGraph").addEventListener("click",function(){
    a.click();
 });
 
+let Rdot;
+let RdotValue;
+const RemoveDots = () => {
+   if(Rdot){
+      RdotValue = 3;
+      Rdot = false;
+      document.getElementById('RemoveDotsBTN').innerText = 'Remove dots';
+   }
+   else
+   {
+      RdotValue = 0;
+      Rdot = true;
+      document.getElementById('RemoveDotsBTN').innerText = 'Show dots';
+   }
+
+   console.log(RdotValue  +" | " + Rdot);
+   for (var i = 0; i < update.length; i++){
+      myChart.data.datasets[i].pointRadius = RdotValue;
+      myChart.update();
+  }
+}
+
+
+
+
 /*
 As you can see here this is our "Chart" via Charts.JS
 This is a very basic line chart that is setup with a nice "Purple colour" for each data point
@@ -265,7 +290,8 @@ var myChart = new Chart(ctx, {
          pointHoverBorderWidth: 2,
          pointRadius: 3,
          pointHitRadius: 10
-      }],
+      }
+   ],
    },
    options: {
       scales: {
