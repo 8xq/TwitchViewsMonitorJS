@@ -14,6 +14,7 @@ As you will be able to see this also has a "Export function" to save the data as
 3 | Export data logged to .CSV 
 4 | Hide/show data boxes
 5 | Export graph as image to .PNG
+6 | Filter tracking "darts"
 ```
 
 ## Credits
